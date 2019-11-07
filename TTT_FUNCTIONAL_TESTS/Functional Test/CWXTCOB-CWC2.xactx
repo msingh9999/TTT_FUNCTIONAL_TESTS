@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="CWC2 - Batch" logLevel="LOG" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
-  <ExtensionData />
-  <ExtensionData componentName="cwxtcob" componentId="5cc35605180742002ac9a03a" />
-  <XaUnit path="CWXTCOB-CWC2.xaunit" />
-</ExecutionContext>
