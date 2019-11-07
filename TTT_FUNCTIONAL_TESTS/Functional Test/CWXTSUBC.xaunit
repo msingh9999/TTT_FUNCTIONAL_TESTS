@@ -8,20 +8,6 @@
         <comm-total expected="18000" />
       </Data>
     </Component>
-    <Component label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
-      <Data>
-        <emp-type>S</emp-type>
-        <sales-amount>100000</sales-amount>
-        <comm-total expected="10000" />
-      </Data>
-    </Component>
-    <Component label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
-      <Data>
-        <emp-type>M</emp-type>
-        <sales-amount>450000</sales-amount>
-        <comm-total expected="17999" />
-      </Data>
-    </Component>
   </Test>
   <MetaData>
     <Component name="CWXTSUBC" type="COBOL">
