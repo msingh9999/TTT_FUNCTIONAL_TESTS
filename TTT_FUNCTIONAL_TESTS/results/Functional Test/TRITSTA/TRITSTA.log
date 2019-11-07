@@ -1,0 +1,97 @@
+09:19:03.979 COMMENT   Engine           Test Scenario execution started
+09:19:03.979 INFO      Engine           Using context settings:
+  Engine Version       : 19.5.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : sncbaw0
+09:19:03.979 INFO      Engine           Setting variables from context and context data extensions
+09:19:03.980 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+09:19:03.980 INFO      Engine             id: environmentType    value: BATCH
+09:19:03.980 INFO      Engine             id: userId             value: sncbaw0
+09:19:03.980 INFO      Component        Interpreting Component: TRITSTA program:TRITSTA
+09:19:03.983 LOG       CWCC Batch       Component Runtime Settings:
+09:19:03.984 LOG       CWCC Batch         Load library              :SALESSUP.BAW1.DEV1.LOAD
+09:19:03.985 LOG       CWCC Batch         Additional load libraries :
+09:19:03.985 LOG       CWCC Batch         Listing libraries         :
+09:19:03.985 LOG       CWCC Batch         SysDebug libraries        :
+09:19:03.985 LOG       CWCC Batch         DB2 Subsystem ID          :
+09:19:03.985 LOG       CWCC Batch         DB2 plan                  :
+09:19:03.985 LOG       CWCC Batch         Call interface            :NONE
+09:19:03.985 LOG       CWCC Batch         Debugger type             :NONE
+09:19:03.985 LOG       CWCC Batch         Component type            :Assembler
+09:19:03.987 INFO      CWCC Batch       Sending Module execution request to Host for module:TRITSTA rollback:false
+09:19:04.060 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/d8ec4556a08941dd973201d8bf314744
+09:19:04.187 LOG       CWCC Batch       Uploading input data for module TRITSTA
+09:19:04.806 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>d8ec4556a08941dd973201d8bf314744</jobdirectory><amode24>true</amode24><members><membername>TRITSTA</membername></members><loads><mainload>SALESSUP.BAW1.DEV1.LOAD</mainload></loads><codepage>1047</codepage><lang>Assembler</lang></xatz_request></XATZREQ>
+09:19:04.991 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0777663</jobid><jobname>SNCBAW0E</jobname><starttime>20190828091717025</starttime></xatz_response></XATZRESP>
+09:19:04.992 LOG       HCIClient        Response received from Host. Message: JobId:J0777663
+09:19:04.992 INFO      HCIClient        Job has been started at host with JobId:J0777663
+09:19:04.992 INFO      CWCC Batch       Waiting for Execution Result from Host
+09:19:08.136 INFO      CWCC Batch       Component completed with program exit: -344
+09:19:08.212 LOG       CWCC Batch       Setting execution variable 'jobid' to J0777663
+09:19:08.212 LOG       CWCC Batch       Setting execution variable 'programexit' to -344
+09:19:08.279 INFO      Component        Verifying program exit code: -344 against verify expression: value < 8
+09:19:08.312 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+09:19:08.312 INFO      Component        Finished interpreting Component: TRITSTA program:TRITSTA
+09:19:08.312 INFO      Component        Interpreting Component: TRITSTA program:TRITSTA
+09:19:08.313 LOG       CWCC Batch       Component Runtime Settings:
+09:19:08.313 LOG       CWCC Batch         Load library              :SALESSUP.BAW1.DEV1.LOAD
+09:19:08.313 LOG       CWCC Batch         Additional load libraries :
+09:19:08.313 LOG       CWCC Batch         Listing libraries         :
+09:19:08.313 LOG       CWCC Batch         SysDebug libraries        :
+09:19:08.313 LOG       CWCC Batch         DB2 Subsystem ID          :
+09:19:08.313 LOG       CWCC Batch         DB2 plan                  :
+09:19:08.313 LOG       CWCC Batch         Call interface            :NONE
+09:19:08.313 LOG       CWCC Batch         Debugger type             :NONE
+09:19:08.313 LOG       CWCC Batch         Component type            :Assembler
+09:19:08.314 INFO      CWCC Batch       Sending Module execution request to Host for module:TRITSTA rollback:false
+09:19:08.377 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/31d01357d4a549cea699511a5753293c
+09:19:08.510 LOG       CWCC Batch       Uploading input data for module TRITSTA
+09:19:09.128 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>31d01357d4a549cea699511a5753293c</jobdirectory><amode24>true</amode24><members><membername>TRITSTA</membername></members><loads><mainload>SALESSUP.BAW1.DEV1.LOAD</mainload></loads><codepage>1047</codepage><lang>Assembler</lang></xatz_request></XATZREQ>
+09:19:09.301 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0777664</jobid><jobname>SNCBAW0E</jobname><starttime>20190828091721337</starttime></xatz_response></XATZRESP>
+09:19:09.301 LOG       HCIClient        Response received from Host. Message: JobId:J0777664
+09:19:09.301 INFO      HCIClient        Job has been started at host with JobId:J0777664
+09:19:09.302 INFO      CWCC Batch       Waiting for Execution Result from Host
+09:19:12.438 INFO      CWCC Batch       Component completed with program exit: -344
+09:19:12.509 LOG       CWCC Batch       Setting execution variable 'jobid' to J0777664
+09:19:12.509 LOG       CWCC Batch       Setting execution variable 'programexit' to -344
+09:19:12.573 INFO      Component        Verifying program exit code: -344 against verify expression: value < 8
+09:19:12.583 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+09:19:12.583 INFO      Component        Finished interpreting Component: TRITSTA program:TRITSTA
+09:19:12.583 INFO      Component        Interpreting Component: TRITSTA program:TRITSTA
+09:19:12.584 LOG       CWCC Batch       Component Runtime Settings:
+09:19:12.584 LOG       CWCC Batch         Load library              :SALESSUP.BAW1.DEV1.LOAD
+09:19:12.584 LOG       CWCC Batch         Additional load libraries :
+09:19:12.584 LOG       CWCC Batch         Listing libraries         :
+09:19:12.584 LOG       CWCC Batch         SysDebug libraries        :
+09:19:12.584 LOG       CWCC Batch         DB2 Subsystem ID          :
+09:19:12.584 LOG       CWCC Batch         DB2 plan                  :
+09:19:12.584 LOG       CWCC Batch         Call interface            :NONE
+09:19:12.584 LOG       CWCC Batch         Debugger type             :NONE
+09:19:12.584 LOG       CWCC Batch         Component type            :Assembler
+09:19:12.584 INFO      CWCC Batch       Sending Module execution request to Host for module:TRITSTA rollback:false
+09:19:12.656 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/70fc6b903e254b7e97956363023c70e1
+09:19:12.792 LOG       CWCC Batch       Uploading input data for module TRITSTA
+09:19:13.394 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>70fc6b903e254b7e97956363023c70e1</jobdirectory><amode24>true</amode24><members><membername>TRITSTA</membername></members><loads><mainload>SALESSUP.BAW1.DEV1.LOAD</mainload></loads><codepage>1047</codepage><lang>Assembler</lang></xatz_request></XATZREQ>
+09:19:13.552 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0777665</jobid><jobname>SNCBAW0E</jobname><starttime>20190828091725590</starttime></xatz_response></XATZRESP>
+09:19:13.553 LOG       HCIClient        Response received from Host. Message: JobId:J0777665
+09:19:13.553 INFO      HCIClient        Job has been started at host with JobId:J0777665
+09:19:13.553 INFO      CWCC Batch       Waiting for Execution Result from Host
+09:19:16.708 INFO      CWCC Batch       Component completed with program exit: -344
+09:19:16.781 LOG       CWCC Batch       Setting execution variable 'jobid' to J0777665
+09:19:16.781 LOG       CWCC Batch       Setting execution variable 'programexit' to -344
+09:19:16.850 INFO      Component        Verifying program exit code: -344 against verify expression: value < 8
+09:19:16.867 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+09:19:16.867 INFO      Component        Finished interpreting Component: TRITSTA program:TRITSTA
+09:19:16.867 VERIFY    ExpectedData     VerificationResult : DataItem: /callargument/type. Actual value is different from expected. Actual value: 4 Expected value: 3. Actual value:4. Expected value:3
+09:19:16.867 VERIFY    Engine           Component name:TRITSTA contains data that where not verified correctly
+09:19:16.867 COMMENT   Engine           Test Scenario execution ended

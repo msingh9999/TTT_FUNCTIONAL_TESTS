@@ -1,0 +1,137 @@
+13:42:46.400 COMMENT   Engine           Test Scenario execution started
+13:42:46.400 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+13:42:46.400 INFO      Engine           Setting variables from context and context data extensions
+13:42:46.400 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+13:42:46.400 INFO      Engine             id: environmentType    value: BATCH
+13:42:46.400 INFO      Engine             id: userId             value: SNCBAW0
+13:42:46.402 INFO      Variable         Interpreting Variable id:data dataFile:CWXTSUBC_EXCEL_data.xls
+13:42:46.420 LOG       Variable         Resolved data items from file CWXTSUBC_EXCEL_data.xls
+<testcase>
+  <emp-type_input>M</emp-type_input>
+  <sales-amount_input>450000</sales-amount_input>
+  <comm-total_expected>18000</comm-total_expected>
+</testcase>
+<testcase>
+  <emp-type_input>S</emp-type_input>
+  <sales-amount_input>100000</sales-amount_input>
+  <comm-total_expected>10000</comm-total_expected>
+</testcase>
+<testcase>
+  <emp-type_input>M</emp-type_input>
+  <sales-amount_input>450000</sales-amount_input>
+  <comm-total_expected>17999</comm-total_expected>
+</testcase>
+13:42:46.420 INFO      IterateData      Interpreting IterateData id: loop. Number of data iterations: 3. Variable loopIndex contains iteration number
+13:42:46.421 INFO      IterateData      Iteration number 0 started.
+13:42:46.421 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <emp-type_input>M</emp-type_input>
+  <sales-amount_input>450000</sales-amount_input>
+  <comm-total_expected>18000</comm-total_expected>
+</testcase>
+13:42:46.421 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:46.424 LOG       CWCC Batch       Component Runtime Settings:
+13:42:46.424 LOG       CWCC Batch         Load libraries :WPAAWJ.TTT.LOAD
+13:42:46.424 LOG       CWCC Batch         Optional main Load library:SYS2.CW.XATESTER.SXATLOAD
+13:42:46.424 LOG       CWCC Batch         Listing libraries         :
+13:42:46.424 LOG       CWCC Batch         SysDebug libraries        :
+13:42:46.424 LOG       CWCC Batch         DB2 Subsystem ID          :
+13:42:46.424 LOG       CWCC Batch         DB2 plan                  :
+13:42:46.424 LOG       CWCC Batch         Call interface            :NONE
+13:42:46.424 LOG       CWCC Batch         Debugger type             :NONE
+13:42:46.424 LOG       CWCC Batch         Component type            :COBOL
+13:42:46.424 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTSUBC rollback:false
+13:42:46.829 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/a048b575166b4338a79e72b5ac0e7e17
+13:42:46.916 LOG       CWCC Batch       Uploading input data for module CWXTSUBC
+13:42:47.399 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>a048b575166b4338a79e72b5ac0e7e17</jobdirectory><amode24>false</amode24><members><membername>CWXTSUBC</membername></members><loads><mainload>SYS2.CW.XATESTER.SXATLOAD</mainload><load>WPAAWJ.TTT.LOAD</load></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:42:47.608 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795411</jobid><jobname>SNCBAW0E</jobname><starttime>20191015134046511</starttime></xatz_response></XATZRESP>
+13:42:47.609 LOG       HCIClient        Response received from Host. Message: JobId:J0795411
+13:42:47.609 INFO      HCIClient        Job has been started at host with JobId:J0795411
+13:42:47.609 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:42:50.702 INFO      CWCC Batch       Component completed with program exit: +0
+13:42:50.752 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795411
+13:42:50.752 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:42:50.802 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:42:50.818 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:42:50.818 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:50.818 INFO      IterateData      Iteration number 1 started.
+13:42:50.819 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <emp-type_input>S</emp-type_input>
+  <sales-amount_input>100000</sales-amount_input>
+  <comm-total_expected>10000</comm-total_expected>
+</testcase>
+13:42:50.819 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:50.819 LOG       CWCC Batch       Component Runtime Settings:
+13:42:50.819 LOG       CWCC Batch         Load libraries :WPAAWJ.TTT.LOAD
+13:42:50.819 LOG       CWCC Batch         Optional main Load library:SYS2.CW.XATESTER.SXATLOAD
+13:42:50.819 LOG       CWCC Batch         Listing libraries         :
+13:42:50.819 LOG       CWCC Batch         SysDebug libraries        :
+13:42:50.819 LOG       CWCC Batch         DB2 Subsystem ID          :
+13:42:50.819 LOG       CWCC Batch         DB2 plan                  :
+13:42:50.819 LOG       CWCC Batch         Call interface            :NONE
+13:42:50.819 LOG       CWCC Batch         Debugger type             :NONE
+13:42:50.819 LOG       CWCC Batch         Component type            :COBOL
+13:42:50.820 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTSUBC rollback:false
+13:42:51.182 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/c29bfe1988df4fb0bd8a4006019bc298
+13:42:51.265 LOG       CWCC Batch       Uploading input data for module CWXTSUBC
+13:42:51.749 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>c29bfe1988df4fb0bd8a4006019bc298</jobdirectory><amode24>false</amode24><members><membername>CWXTSUBC</membername></members><loads><mainload>SYS2.CW.XATESTER.SXATLOAD</mainload><load>WPAAWJ.TTT.LOAD</load></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:42:51.921 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795412</jobid><jobname>SNCBAW0E</jobname><starttime>20191015134050842</starttime></xatz_response></XATZRESP>
+13:42:51.922 LOG       HCIClient        Response received from Host. Message: JobId:J0795412
+13:42:51.922 INFO      HCIClient        Job has been started at host with JobId:J0795412
+13:42:51.922 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:42:55.013 INFO      CWCC Batch       Component completed with program exit: +0
+13:42:55.058 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795412
+13:42:55.058 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:42:55.111 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:42:55.131 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:42:55.131 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:55.131 INFO      IterateData      Iteration number 2 started.
+13:42:55.131 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <emp-type_input>M</emp-type_input>
+  <sales-amount_input>450000</sales-amount_input>
+  <comm-total_expected>17999</comm-total_expected>
+</testcase>
+13:42:55.131 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:55.132 LOG       CWCC Batch       Component Runtime Settings:
+13:42:55.132 LOG       CWCC Batch         Load libraries :WPAAWJ.TTT.LOAD
+13:42:55.132 LOG       CWCC Batch         Optional main Load library:SYS2.CW.XATESTER.SXATLOAD
+13:42:55.132 LOG       CWCC Batch         Listing libraries         :
+13:42:55.132 LOG       CWCC Batch         SysDebug libraries        :
+13:42:55.132 LOG       CWCC Batch         DB2 Subsystem ID          :
+13:42:55.132 LOG       CWCC Batch         DB2 plan                  :
+13:42:55.132 LOG       CWCC Batch         Call interface            :NONE
+13:42:55.132 LOG       CWCC Batch         Debugger type             :NONE
+13:42:55.132 LOG       CWCC Batch         Component type            :COBOL
+13:42:55.132 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTSUBC rollback:false
+13:42:55.487 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/2b1ec0340188445bb83ae84cd6674b3a
+13:42:55.579 LOG       CWCC Batch       Uploading input data for module CWXTSUBC
+13:42:56.094 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>2b1ec0340188445bb83ae84cd6674b3a</jobdirectory><amode24>false</amode24><members><membername>CWXTSUBC</membername></members><loads><mainload>SYS2.CW.XATESTER.SXATLOAD</mainload><load>WPAAWJ.TTT.LOAD</load></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:42:56.289 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795413</jobid><jobname>SNCBAW0E</jobname><starttime>20191015134055207</starttime></xatz_response></XATZRESP>
+13:42:56.290 LOG       HCIClient        Response received from Host. Message: JobId:J0795413
+13:42:56.290 INFO      HCIClient        Job has been started at host with JobId:J0795413
+13:42:56.290 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:42:59.386 INFO      CWCC Batch       Component completed with program exit: +0
+13:42:59.433 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795413
+13:42:59.433 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:42:59.482 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:42:59.500 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:42:59.500 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+13:42:59.502 VERIFY    ExpectedData     VerificationResult : DataItem: /comm-total. Actual value is different from expected. Actual value: 18000.0 Expected: 17999.0. Actual value:18000. Expected value:17999
+13:42:59.502 VERIFY    Engine           Component name:CWXTSUBC contains data that where not verified correctly
+13:42:59.502 INFO      IterateData      IterateData completed
+13:42:59.502 COMMENT   Engine           Test Scenario execution ended

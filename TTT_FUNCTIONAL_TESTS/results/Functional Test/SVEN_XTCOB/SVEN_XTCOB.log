@@ -1,0 +1,58 @@
+11:21:03.226 COMMENT   Engine           Test Scenario execution started
+11:21:03.226 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+11:21:03.226 INFO      Engine           Setting variables from context and context data extensions
+11:21:03.226 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+11:21:03.226 INFO      Engine             id: environmentType    value: BATCH
+11:21:03.226 INFO      Engine             id: userId             value: SNCBAW0
+11:21:03.230 INFO      Component        Interpreting Component: CWXTCOB program:CWXTCOB
+11:21:03.231 LOG       CWCC Batch       Component Runtime Settings:
+11:21:03.231 LOG       CWCC Batch         Load libraries :HDD0071.DEMO.LOAD.PDSE
+11:21:03.231 LOG       CWCC Batch         Optional main Load library:SYS2.CW.XATESTER.SXATLOAD
+11:21:03.231 LOG       CWCC Batch         Listing libraries         :
+11:21:03.231 LOG       CWCC Batch         SysDebug libraries        :
+11:21:03.231 LOG       CWCC Batch         DB2 Subsystem ID          :
+11:21:03.231 LOG       CWCC Batch         DB2 plan                  :
+11:21:03.231 LOG       CWCC Batch         Call interface            :NONE
+11:21:03.231 LOG       CWCC Batch         Debugger type             :NONE
+11:21:03.231 LOG       CWCC Batch         Component type            :COBOL
+11:21:03.234 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTCOB rollback:false
+11:21:03.604 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/6c692cdab1034199acce455c4a90e3c3
+11:21:03.698 LOG       CWCC Batch       Uploading input data for module CWXTCOB
+11:21:04.190 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>6c692cdab1034199acce455c4a90e3c3</jobdirectory><amode24>false</amode24><members><membername>CWXTCOB</membername></members><loads><mainload>SYS2.CW.XATESTER.SXATLOAD</mainload><load>HDD0071.DEMO.LOAD.PDSE</load></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+11:21:04.358 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0796602</jobid><jobname>SNCBAW0E</jobname><starttime>20191018111902625</starttime></xatz_response></XATZRESP>
+11:21:04.358 LOG       HCIClient        Response received from Host. Message: JobId:J0796602
+11:21:04.358 INFO      HCIClient        Job has been started at host with JobId:J0796602
+11:21:04.358 INFO      CWCC Batch       Waiting for Execution Result from Host
+11:21:05.408 LOG       CWCC Batch       Retrieving job information host for job:J0796602
+11:21:05.412 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0796602</jobid></xatz_request></XATZREQ>
+11:21:05.759 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>SNCBAW0E</name><status>ACTIVE</status><returncode>           </returncode><steps></steps></job></responsedata></xatz_response></XATZRESP>
+11:21:05.760 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+11:21:05.762 ERROR     CWCC Batch       Job information:
+<job>
+  <name>SNCBAW0E</name>
+  <status>ACTIVE</status>
+  <returncode />
+  <steps />
+</job>
+11:21:05.763 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0796602</jobid></xatz_request></XATZREQ>
+11:21:05.954 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>SNCBAW0E</name><status>ACTIVE</status><returncode>           </returncode><steps></steps></job></responsedata></xatz_response></XATZRESP>
+11:21:05.954 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+11:21:05.954 INFO      CWCC Batch       Content of Spool files:
+11:21:05.954 INFO      CWCC Batch       
+11:21:05.963 ERROR     Engine           ***********************************************************************************************************************************
+11:21:05.963 ERROR     Engine           ************** Execution was interrupted. The test scenario execution is now cancelled and the result is set to failure ***************
+11:21:05.963 ERROR     Engine           ***********************************************************************************************************************************
+11:21:05.963 COMMENT   Engine           Test Scenario execution ended

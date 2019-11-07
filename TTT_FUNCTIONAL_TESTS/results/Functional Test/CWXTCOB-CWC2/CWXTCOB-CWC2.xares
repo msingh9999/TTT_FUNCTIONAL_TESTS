@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="VERIFICATION_ERROR" containsSimulation="false">
+  <ExecutionId>ec17bc60-d760-4520-9489-98a43133977f</ExecutionId>
+  <Message />
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
+      <Test>
+        <Component id="cwxtcob" label="CWXTCOB" moduleName="CWXTCOB" programExitVerify="value &lt; 8" programExit="0" rollback="false">
+          <Data>
+            <parminfo>
+              <parm-lth>5</parm-lth>
+              <parm-data>00003</parm-data>
+            </parminfo>
+          </Data>
+        </Component>
+        <VerifyRemoteFile name="Verify remote file" mode="COMPARE" haltExecution="false" actualPath="SNCBAW0.REPORT.FILE" expectedPath="SNCBAW0.REPORT.FILE2">
+          <Result>&lt;root&gt;&lt;difs&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;4&lt;/newrno&gt;&lt;oldrno&gt;4&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ RUN DATE  07/22/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ RUN DATE  03/21/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4DED4CCEC44FF6FF6FF4444444CDDDDECC4CDDDCDECECDD4DCDDDE444444444444444444DCCC444F&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;09450413500071221190000000547368550364755213965095769300000000000000000071750001&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4DED4CCEC44FF6FF6FF4444444CDDDDECC4CDDDCDECECDD4DCDDDE444444444444444444DCCC444F&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;09450413500031211190000000547368550364755213965095769300000000000000000071750001&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;12&lt;/newrno&gt;&lt;oldrno&gt;12&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ DAN PEARSON     NORTH   S   07/20/89   29    850.00     0.00   1000.00  1850.00]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4CCD4DCCDEDD44444DDDEC444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;0415075192650000056938000200007120189000300000850B00000000B000001000B00001850B00&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4CCD4DCCDEDD44444DDDEC444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;0415075192650000056938000200007120189000290000850B00000000B000001000B00001850B00&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;15&lt;/newrno&gt;&lt;oldrno&gt;15&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ VALERIE OLSEN   EAST    S   05/01/94   24    900.00     0.00   5600.00  6500.00]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4ECDCDCC4DDECD444CCEE4444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;0513599506325500051230000200005101194000250000900B00000000B000005600B00006500B00&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4ECDCDCC4DDECD444CCEE4444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;0513599506325500051230000200005101194000240000900B00000000B000005600B00006500B00&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;16&lt;/newrno&gt;&lt;oldrno&gt;16&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ LAURA MARTIN    EAST    S   06/14/83   35   1225.00     0.00   6000.00  7225.00]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4DCEDC4DCDECD4444CCEE4444E444FF6FF6FF444FF444FFFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;0314910419395000051230000200006114183000360001225B00000000B000006000B00007225B00&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4DCEDC4DCDECD4444CCEE4444E444FF6FF6FF444FF444FFFF4FF44444F4FF444FFFF4FF44FFFF4FF&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;0314910419395000051230000200006114183000350001225B00000000B000006000B00007225B00&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;17&lt;/newrno&gt;&lt;oldrno&gt;17&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ MARCIA SULLIVAN EAST    H   04/05/93   25   1200.00   180.00      0.00  1380.00]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4DCDCCC4EEDDCECD4CCEE4444C444FF6FF6FF444FF444FFFF4FF444FFF4FF444444F4FF44FFFF4FF&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;0419391024339515051230000800004105193000260001200B00000180B000000000B00001380B00&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4DCDCCC4EEDDCECD4CCEE4444C444FF6FF6FF444FF444FFFF4FF444FFF4FF444444F4FF44FFFF4FF&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;0419391024339515051230000800004105193000250001200B00000180B000000000B00001380B00&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;dif&gt;&lt;newrno&gt;19&lt;/newrno&gt;&lt;oldrno&gt;19&lt;/oldrno&gt; &#xD;&lt;newchr&gt;&lt;![CDATA[ THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00]]&gt;&lt;/newchr&gt; &#xD;&lt;oldchr&gt;&lt;![CDATA[ THOMAS LONG     WEST    H   03/31/87   31   1000.00     0.00      0.00  1000.00]]&gt;&lt;/oldchr&gt; &#xD;&lt;newhex1&gt;4ECDDCE4DDDC44444ECEE4444C444FF6FF6FF444FF444FFFF4FF44444F4FF444444F4FF44FFFF4FF&lt;/newhex1&gt; &#xD;&lt;newhex2&gt;0386412036570000065230000800003131187000320001000B00000000B000000000B00001000B00&lt;/newhex2&gt; &#xD;&lt;oldhex1&gt;4ECDDCE4DDDC44444ECEE4444C444FF6FF6FF444FF444FFFF4FF44444F4FF444444F4FF44FFFF4FF&lt;/oldhex1&gt; &#xD;&lt;oldhex2&gt;0386412036570000065230000800003131187000310001000B00000000B000000000B00001000B00&lt;/oldhex2&gt; &#xD;&lt;/dif&gt;&#xD;&lt;/difs&gt;&lt;/root&gt;</Result>
+          <ExpectedResult><![CDATA[Record number: 4
+ RUN DATE  03/21/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1
+4DED4CCEC44FF6FF6FF4444444CDDDDECC4CDDDCDECECDD4DCDDDE444444444444444444DCCC444F
+09450413500031211190000000547368550364755213965095769300000000000000000071750001
+
+Record number: 12
+ DAN PEARSON     NORTH   S   07/20/89   29    850.00     0.00   1000.00  1850.00
+4CCD4DCCDEDD44444DDDEC444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0415075192650000056938000200007120189000290000850B00000000B000001000B00001850B00
+
+Record number: 15
+ VALERIE OLSEN   EAST    S   05/01/94   24    900.00     0.00   5600.00  6500.00
+4ECDCDCC4DDECD444CCEE4444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0513599506325500051230000200005101194000240000900B00000000B000005600B00006500B00
+
+Record number: 16
+ LAURA MARTIN    EAST    S   06/14/83   35   1225.00     0.00   6000.00  7225.00
+4DCEDC4DCDECD4444CCEE4444E444FF6FF6FF444FF444FFFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0314910419395000051230000200006114183000350001225B00000000B000006000B00007225B00
+
+Record number: 17
+ MARCIA SULLIVAN EAST    H   04/05/93   25   1200.00   180.00      0.00  1380.00
+4DCDCCC4EEDDCECD4CCEE4444C444FF6FF6FF444FF444FFFF4FF444FFF4FF444444F4FF44FFFF4FF
+0419391024339515051230000800004105193000250001200B00000180B000000000B00001380B00
+
+Record number: 19
+ THOMAS LONG     WEST    H   03/31/87   31   1000.00     0.00      0.00  1000.00
+4ECDDCE4DDDC44444ECEE4444C444FF6FF6FF444FF444FFFF4FF44444F4FF444444F4FF44FFFF4FF
+0386412036570000065230000800003131187000310001000B00000000B000000000B00001000B00]]></ExpectedResult>
+          <ActualResult><![CDATA[Record number: 4
+ RUN DATE  07/22/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1
+4DED4CCEC44FF6FF6FF4444444CDDDDECC4CDDDCDECECDD4DCDDDE444444444444444444DCCC444F
+09450413500071221190000000547368550364755213965095769300000000000000000071750001
+
+Record number: 12
+ DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00
+4CCD4DCCDEDD44444DDDEC444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0415075192650000056938000200007120189000300000850B00000000B000001000B00001850B00
+
+Record number: 15
+ VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00
+4ECDCDCC4DDECD444CCEE4444E444FF6FF6FF444FF4444FFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0513599506325500051230000200005101194000250000900B00000000B000005600B00006500B00
+
+Record number: 16
+ LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00
+4DCEDC4DCDECD4444CCEE4444E444FF6FF6FF444FF444FFFF4FF44444F4FF444FFFF4FF44FFFF4FF
+0314910419395000051230000200006114183000360001225B00000000B000006000B00007225B00
+
+Record number: 17
+ MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00
+4DCDCCC4EEDDCECD4CCEE4444C444FF6FF6FF444FF444FFFF4FF444FFF4FF444444F4FF44FFFF4FF
+0419391024339515051230000800004105193000260001200B00000180B000000000B00001380B00
+
+Record number: 19
+ THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00
+4ECDDCE4DDDC44444ECEE4444C444FF6FF6FF444FF444FFFF4FF44444F4FF444444F4FF44FFFF4FF
+0386412036570000065230000800003131187000320001000B00000000B000000000B00001000B00]]></ActualResult>
+        </VerifyRemoteFile>
+      </Test>
+      <MetaData>
+        <Component name="CWXTCOB" type="COBOL">
+          <INOUT>
+            <parminfo>
+              <parm-lth type="NumericBinary" length="4" bytes="2" signed="true" decimals="0" />
+              <parm-data type="Character" length="5" bytes="5" />
+            </parminfo>
+          </INOUT>
+        </Component>
+      </MetaData>
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="CWC2 - Batch" logLevel="LOG" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="sncbaw0">
+      <platformruntime database="DSC2CWC2" driver="com.ibm.db2.jcc.DB2Driver" uri="jdbc:db2://cwc2.nasa.cpwr.corp:2846/${database}" environmenttype="BATCH" callinterface="NONE" />
+      <ExtensionData />
+      <ExtensionData componentName="cwxtcob" componentId="5cc35605180742002ac9a03a">
+        <Parameter key="sourcelibrary">
+          <Value>SYS2.CW.XTR17X.SLXTSAMP</Value>
+        </Parameter>
+        <Parameter key="loadlibrary">
+          <Value>SNCBAW0.ESS.LOAD</Value>
+        </Parameter>
+        <Parameter key="callinterface">
+          <Value>NONE</Value>
+        </Parameter>
+      </ExtensionData>
+      <References componentName="cwxtcob">
+        <Reference>//EMPFILE  DD  DISP=SHR,DSN=SYS2.CW.&amp;CWGAXT..SLXTSAMP(CWXTDATA)
+//RPTFILE  DD   DISP=(MOD,CATLG),DSN=SNCBAW0.REPORT.FILE,
+//         UNIT=SYSDA,SPACE=(TRK,(1,1))
+//SYSOUT   DD  SYSOUT=*</Reference>
+      </References>
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="cwxtcob" path="CWXTCOB-CWC2.xaunit">
+        <Test>
+          <Component id="cwxtcob" label="CWXTCOB" moduleName="CWXTCOB" programExitVerify="value &lt; 8" rollback="false">
+            <Data>
+              <parminfo>
+                <parm-lth>5</parm-lth>
+                <parm-data>00003</parm-data>
+              </parminfo>
+            </Data>
+          </Component>
+          <VerifyRemoteFile name="Verify remote file" mode="COMPARE" haltExecution="false" actualPath="SNCBAW0.REPORT.FILE" expectedPath="SNCBAW0.REPORT.FILE2" />
+        </Test>
+        <MetaData>
+          <Component name="CWXTCOB" type="COBOL">
+            <INOUT>
+              <parminfo>
+                <parm-lth type="NumericBinary" length="4" bytes="2" signed="true" decimals="0" />
+                <parm-data type="Character" length="5" bytes="5" />
+              </parminfo>
+            </INOUT>
+          </Component>
+        </MetaData>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20190924-13-56-07</Started>
+  <Ended>20190924-13-56-26</Ended>
+</XaUnitResult>

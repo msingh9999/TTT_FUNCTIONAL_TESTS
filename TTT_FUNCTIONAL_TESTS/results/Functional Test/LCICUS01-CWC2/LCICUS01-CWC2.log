@@ -1,0 +1,28 @@
+16:25:59.926 COMMENT   Engine           Test Scenario execution started
+16:25:59.932 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5c51a46afba8720a90ccc64d
+  Environment type              : Cics
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 192.168.96.142
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+16:25:59.932 INFO      Engine           Setting variables from context and context data extensions
+16:25:59.932 INFO      Engine             id: environmentId      value: 5c51a46afba8720a90ccc64d
+16:25:59.933 INFO      Engine             id: environmentType    value: CICS
+16:25:59.933 INFO      Engine             id: userId             value: SNCBAW0
+16:25:59.936 INFO      SQLSelect        Interpreting SQLSelect id:SELECT statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER
+16:25:59.936 INFO      SQLSelect        Using database from Environment:DSC2CWC2
+16:25:59.939 LOG       SQLSelect        Establishing connection to database DSC2CWC2
+16:26:00.506 ERROR     SQLSelect        Unable to get a database connection. [jcc][t4][2057][11264][3.67.49] The application server rejected establishment of the connection.
+An attempt was made to access a database, DSC2CWC2, which was either not found or does not support transactions. ERRORCODE=-4499, SQLSTATE=08004
+16:26:00.507 ERROR     Engine           Unable to get a database connection. [jcc][t4][2057][11264][3.67.49] The application server rejected establishment of the connection.
+An attempt was made to access a database, DSC2CWC2, which was either not found or does not support transactions. ERRORCODE=-4499, SQLSTATE=08004
+16:26:00.507 ERROR     Engine           An error occurred. Now stopping the execution.
+16:26:00.507 COMMENT   Engine           Test Scenario execution ended

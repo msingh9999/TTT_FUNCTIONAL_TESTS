@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="xaktdb2x">
+  <Test>
+    <SQLSelect id="BEFORE" description="DB2 TABLE BEFORE UPDATE" maxRows="20">
+      <Statement>SELECT * FROM SNCBAW0.KT_DEMOTAB</Statement>
+    </SQLSelect>
+    <Component id="xaktdb2x" label="XAKTDB2X" moduleName="XAKTDB2X" programExitVerify="value &lt; 8" rollback="true">
+      <Data>
+        <parminfo>
+          <parm-lth>5</parm-lth>
+          <parm-data>00001</parm-data>
+          <grand-total />
+          <total-record />
+        </parminfo>
+      </Data>
+      <SQLSelect id="xaktdb2xSql" maxRows="5">
+        <Statement>SELECT EMP_NUM, WAGES, OVERTIME, COMM  FROM SNCBAW0.KT_DEMOTAB</Statement>
+        <Output name="EMP_NUM" />
+        <Output name="WAGES" />
+        <Output name="OVERTIME" />
+        <Output name="COMM" />
+      </SQLSelect>
+    </Component>
+    <SQLSelect id="AFTER" description="VERIFY ROLLBACK TOOK PLACE" maxRows="20">
+      <Statement>SELECT * FROM SNCBAW0.KT_DEMOTAB</Statement>
+    </SQLSelect>
+    <Verify name="Verify" haltExecution="false" description="COMPARE BEFORE AND AFTER">
+      <Expected expression="BEFORE" />
+      <Actual expression="AFTER" />
+    </Verify>
+    <Verify name="Verify Update" haltExecution="false" description="VERIFY DATA UPDATED BEFORE ROLLBACK">
+      <Statement><![CDATA[xaktdb2xSql.Row[0].WAGES>0]]></Statement>
+    </Verify>
+  </Test>
+  <MetaData>
+    <Component name="XAKTDB2X" type="COBOL">
+      <INOUT>
+        <parminfo>
+          <parm-lth type="NumericBinary" length="4" bytes="2" inOutType="INPUT" signed="true" decimals="0" />
+          <parm-data type="Character" length="5" bytes="5" inOutType="INPUT" />
+          <grand-total type="NumericBinary" length="7" bytes="4" inOutType="OUTPUT" signed="true" decimals="0" />
+          <total-record type="NumericDisplay" length="3" bytes="3" inOutType="OUTPUT" signed="false" decimals="0" />
+        </parminfo>
+      </INOUT>
+    </Component>
+  </MetaData>
+</XaUnit>

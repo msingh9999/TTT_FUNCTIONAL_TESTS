@@ -1,0 +1,57 @@
+15:36:38.383 COMMENT   Engine           Test Scenario execution started
+15:36:38.383 INFO      Engine           Using context settings:
+  Engine Version       : 19.4.1
+  Environment id                : 5ca4b87618074200e09e3f7c
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : 
+  Codepage                      : 
+  Host user Id                  : sncbaw0
+15:36:38.383 INFO      Engine           Setting variables from context and context data extensions
+15:36:38.384 INFO      Engine             id: environmentId      value: 5ca4b87618074200e09e3f7c
+15:36:38.384 INFO      Engine             id: environmentType    value: BATCH
+15:36:38.384 INFO      Engine             id: userId             value: sncbaw0
+15:36:38.384 INFO      Component        Interpreting Component: XARISCAL program:XARISCAL
+15:36:38.387 LOG       TEST DRIVE - BATCH Component Runtime Settings:
+15:36:38.387 LOG       TEST DRIVE - BATCH   Load library              :SYS2.CW.CXR17X.SLCXLOAD
+15:36:38.387 LOG       TEST DRIVE - BATCH   Additional load libraries :
+15:36:38.387 LOG       TEST DRIVE - BATCH   Listing libraries         :
+15:36:38.387 LOG       TEST DRIVE - BATCH   SysDebug libraries        :
+15:36:38.388 LOG       TEST DRIVE - BATCH   DB2 Subsystem ID          :
+15:36:38.388 LOG       TEST DRIVE - BATCH   DB2 plan                  :
+15:36:38.388 LOG       TEST DRIVE - BATCH   Call interface            :NONE
+15:36:38.388 LOG       TEST DRIVE - BATCH   Debugger type             :NONE
+15:36:38.388 LOG       TEST DRIVE - BATCH   Component type            :COBOL
+15:36:38.391 INFO      TEST DRIVE - BATCH Sending Module execution request to Host for module:XARISCAL rollback:false
+15:36:38.391 ERROR     TEST DRIVE - BATCH Unable to initiate Server connection to server CWCC.COMPUWARE.COM port:16196 ftpPort:21. 
+15:36:38.391 ERROR     TEST DRIVE - BATCH java.lang.NullPointerException
+	at java.util.Hashtable.put(Hashtable.java:459)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at com.compuware.unittest.eclipse.hostservices.hci.HciHostServicesEclipse.connect(HciHostServicesEclipse.java:64)
+	at com.compuware.unittest.eclipse.hostservices.hci.HciHostServicesEclipse.connect(HciHostServicesEclipse.java:100)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIClient.connect(HCIClient.java:344)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIClient.initiate(HCIClient.java:138)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIHostCommunicator.initiate(HCIHostCommunicator.java:133)
+	at com.compuware.xatester.xaunit.platforms.strategies.AbstractSocketandFTPStrategy.initiate(AbstractSocketandFTPStrategy.java:73)
+	at com.compuware.xatester.xaunit.platforms.HostProcess.execute(HostProcess.java:229)
+	at com.compuware.xatester.xaunit.platforms.FTPProcessEnvironment.doExecuteComponent(FTPProcessEnvironment.java:394)
+	at com.compuware.xatester.xaunit.platforms.ConfigurableEnvironment.doExecuteComponent(ConfigurableEnvironment.java:73)
+	at com.compuware.xatester.xaunit.platforms.AbstractEnvironment.executeComponent(AbstractEnvironment.java:201)
+	at com.compuware.xatester.xaunit.extensions.COMPONENTComponent.interprete(COMPONENTComponent.java:603)
+	at com.compuware.xatester.xaunit.extensions.COMPONENTComponent.interprete(COMPONENTComponent.java:1)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpretChildComponents(XaUnitInterpreter.java:89)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpret(XaUnitInterpreter.java:213)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor.execute(XaUnitExecutor.java:184)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor.access$0(XaUnitExecutor.java:180)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor$XaUnitExecutorJob.run(XaUnitExecutor.java:292)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+15:36:38.391 ERROR     Engine           Unable to execute the module:XARISCAL at the host. Unable to initiate Server connection to server CWCC.COMPUWARE.COM port:16196 ftpPort:21. null
+15:36:38.391 ERROR     Engine           An error occured. Now stopping the execution.
+15:36:38.392 COMMENT   Engine           Test Scenario execution ended

@@ -1,0 +1,45 @@
+13:46:09.954 COMMENT   Engine           Test Scenario execution started
+13:46:09.959 INFO      Engine           Using context settings:
+  Engine Version       : 19.4.1
+  Environment id                : 5ca4b87618074200e09e3f7c
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : sncbaw0
+13:46:09.959 INFO      Engine           Setting variables from context and context data extensions
+13:46:09.959 INFO      Engine             id: environmentId      value: 5ca4b87618074200e09e3f7c
+13:46:09.959 INFO      Engine             id: environmentType    value: BATCH
+13:46:09.959 INFO      Engine             id: userId             value: sncbaw0
+13:46:09.961 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+13:46:10.002 LOG       TEST DRIVE - BATCH Component Runtime Settings:
+13:46:10.002 LOG       TEST DRIVE - BATCH   Load library              :CWEZ000.TOPAZ.TTT.LOAD
+13:46:10.002 LOG       TEST DRIVE - BATCH   Additional load libraries :
+13:46:10.002 LOG       TEST DRIVE - BATCH   Listing libraries         :
+13:46:10.002 LOG       TEST DRIVE - BATCH   SysDebug libraries        :
+13:46:10.002 LOG       TEST DRIVE - BATCH   DB2 Subsystem ID          :
+13:46:10.002 LOG       TEST DRIVE - BATCH   DB2 plan                  :
+13:46:10.002 LOG       TEST DRIVE - BATCH   Call interface            :NONE
+13:46:10.002 LOG       TEST DRIVE - BATCH   Debugger type             :NONE
+13:46:10.002 LOG       TEST DRIVE - BATCH   Component type            :COBOL
+13:46:10.012 INFO      TEST DRIVE - BATCH Sending Module execution request to Host for module:CWXTSUBC rollback:false
+13:46:10.668 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/14ced3fd29f34bb7b9cd1981a224b324
+13:46:10.821 LOG       TEST DRIVE - BATCH Uploading input data for module CWXTSUBC
+13:46:11.491 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>14ced3fd29f34bb7b9cd1981a224b324</jobdirectory><amode24>false</amode24><members><membername>CWXTSUBC</membername></members><loads><mainload>CWEZ000.TOPAZ.TTT.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:46:11.677 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0727285</jobid></xatz_response></XATZRESP>
+13:46:11.684 LOG       HCIClient        Response received from Host. Message: JobId:J0727285
+13:46:11.684 INFO      HCIClient        Job has been started at host with JobId:J0727285
+13:46:11.688 INFO      TEST DRIVE - BATCH Waiting for Execution Result from Host
+13:46:14.840 INFO      TEST DRIVE - BATCH Component completed with program exit: +0
+13:46:14.923 LOG       TEST DRIVE - BATCH Setting execution variable 'jobid' to J0727285
+13:46:14.923 LOG       TEST DRIVE - BATCH Setting execution variable 'programexit' to 0
+13:46:15.064 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:46:15.507 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:46:15.507 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+13:46:15.509 COMMENT   Engine           Test Scenario execution ended

@@ -1,0 +1,72 @@
+12:28:25.131 COMMENT   Engine           Test Scenario execution started
+12:28:25.133 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+12:28:25.133 INFO      Engine           Setting variables from context and context data extensions
+12:28:25.133 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+12:28:25.133 INFO      Engine             id: environmentType    value: BATCH
+12:28:25.134 INFO      Engine             id: userId             value: SNCBAW0
+12:28:25.184 INFO      Component        Interpreting Component: CWXTCOB program:CWXTCOB
+12:28:25.206 INFO      Component        Datasets from component setup definition will be deleted:
+12:28:25.207 INFO      Component          Dataset :  SNCBAW0.REPORT.FILE
+12:28:25.239 LOG       CWCC Batch       Final JCL setup for the component:
+//EMPFILE  DD  DISP=SHR,DSN=SYS2.CW.&CWGAXT..SLXTSAMP(CWXTDATA)
+//RPTFILE  DD   DISP=(NEW,CATLG),DSN=SNCBAW0.REPORT.FILE,
+//         UNIT=SYSDA,SPACE=(TRK,(1,1))
+//SYSOUT   DD  SYSOUT=*
+
+12:28:25.239 LOG       CWCC Batch       Component Runtime Settings:
+12:28:25.239 LOG       CWCC Batch         Load libraries :
+12:28:25.240 LOG       CWCC Batch         Optional main Load library:SNCBAW0.ESS.LOAD
+12:28:25.240 LOG       CWCC Batch         Listing libraries         :
+12:28:25.240 LOG       CWCC Batch         SysDebug libraries        :
+12:28:25.240 LOG       CWCC Batch         DB2 Subsystem ID          :
+12:28:25.240 LOG       CWCC Batch         DB2 plan                  :
+12:28:25.240 LOG       CWCC Batch         Call interface            :NONE
+12:28:25.240 LOG       CWCC Batch         Debugger type             :NONE
+12:28:25.240 LOG       CWCC Batch         Component type            :COBOL
+12:28:25.240 INFO      CWCC Batch       Dataset from component repository definition will be deleted: 
+12:28:25.240 INFO      CWCC Batch        Dataset : SNCBAW0.REPORT.FILE
+12:28:25.255 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTCOB rollback:false
+12:28:26.292 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/d7055239ff0d4862a8b738f3b3c024e4
+12:28:26.384 LOG       CWCC Batch       Uploading input data for module CWXTCOB
+12:28:27.487 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>d7055239ff0d4862a8b738f3b3c024e4</jobdirectory><amode24>false</amode24><members><membername>CWXTCOB</membername></members><loads><mainload>SNCBAW0.ESS.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang><refs><ref>//EMPFILE  DD  DISP=SHR,DSN=SYS2.CW.&amp;CWGAXT..SLXTSAMP(CWXTDATA)</ref><ref>//RPTFILE  DD   DISP=(NEW,CATLG),DSN=SNCBAW0.REPORT.FILE,</ref><ref>//         UNIT=SYSDA,SPACE=(TRK,(1,1))</ref><ref>//SYSOUT   DD  SYSOUT=*</ref></refs><deldsns><dldsn>SNCBAW0.REPORT.FILE</dldsn></deldsns></xatz_request></XATZREQ>
+12:28:27.850 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0797013</jobid><jobname>SNCBAW0E</jobname><starttime>20191021122624684</starttime></xatz_response></XATZRESP>
+12:28:27.853 LOG       HCIClient        Response received from Host. Message: JobId:J0797013
+12:28:27.853 INFO      HCIClient        Job has been started at host with JobId:J0797013
+12:28:27.854 INFO      CWCC Batch       Waiting for Execution Result from Host
+12:28:31.059 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0797013</jobid></xatz_request></XATZREQ>
+12:28:31.476 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>SNCBAW0E</name><status>ACTIVE</status><returncode>           </returncode><steps></steps></job></responsedata></xatz_response></XATZRESP>
+12:28:31.476 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+12:28:34.585 INFO      CWCC Batch       Component completed with program exit: +0
+12:28:34.638 LOG       CWCC Batch       Setting execution variable 'jobid' to J0797013
+12:28:34.638 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+12:28:34.801 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+12:28:35.283 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+12:28:35.283 INFO      Component        Finished interpreting Component: CWXTCOB program:CWXTCOB
+12:28:35.285 INFO      VerifyRemoteFile Interpreting VerifyRemoteFile in COMPARE mode. Dataset to verify: SNCBAW0.REPORT.FILE2
+12:28:35.287 INFO      CWCC Batch       Sending Job execution request to Host 
+12:28:35.650 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/b2c95724c63c48b19c723c472c8d9839
+12:28:35.825 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>COMPARE</operation><runat>DAY</runat><jobdirectory>b2c95724c63c48b19c723c472c8d9839</jobdirectory><outputfilepath>output.xml</outputfilepath><snapshot><compare><olddsn>SNCBAW0.REPORT.FILE</olddsn><newdsn>SNCBAW0.REPORT.FILE2</newdsn><compareopts /></compare></snapshot></xatz_request></XATZREQ>
+12:28:35.989 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0797014</jobid><jobname>SNCBAW0S</jobname><starttime>20191021122632880</starttime></xatz_response></XATZRESP>
+12:28:35.990 LOG       HCIClient        Response received from Host. Message: JobId:J0797014
+12:28:35.990 INFO      HCIClient        Job has been started at host with JobId:J0797014
+12:28:35.990 INFO      CWCC Batch       Waiting for Execution Result from Host
+12:28:39.102 LOG       VerifyRemoteFile Notification message contained a Verification Error, now retrieving compare files with content
+12:28:39.102 ERROR     VerifyRemoteFile Comparison of DSN expected:SNCBAW0.REPORT.FILE actual:SNCBAW0.REPORT.FILE2 was FAIL
+12:28:39.102 LOG       VerifyRemoteFile Getting information about the comparison from file:output.xml.cmpr12
+12:28:39.102 LOG       VerifyRemoteFile Retrieving file:output.xml.cmpr12
+12:28:39.226 ERROR     VerifyRemoteFile Expected and Actual files/datasets are NOT equal
+12:28:39.228 ERROR     VerifyRemoteFile Actual and expected datasets are not equal. Differences found in one or more records between actual dataset: SNCBAW0.REPORT.FILE2 and expected dataset:SNCBAW0.REPORT.FILE
+12:28:39.228 COMMENT   Engine           Test Scenario execution ended

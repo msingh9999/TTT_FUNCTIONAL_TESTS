@@ -1,0 +1,45 @@
+13:39:05.291 COMMENT   Engine           Test Scenario execution started
+13:39:05.291 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+13:39:05.291 INFO      Engine           Setting variables from context and context data extensions
+13:39:05.291 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+13:39:05.291 INFO      Engine             id: environmentType    value: BATCH
+13:39:05.291 INFO      Engine             id: userId             value: SNCBAW0
+13:39:05.294 INFO      Component        Interpreting Component: CWXTSUBC program:CWXTSUBC
+13:39:05.294 LOG       CWCC Batch       Component Runtime Settings:
+13:39:05.295 LOG       CWCC Batch         Load libraries :WPAAWJ.TTT.LOAD
+13:39:05.295 LOG       CWCC Batch         Optional main Load library:SYS2.CW.XATESTER.SXATLOAD
+13:39:05.295 LOG       CWCC Batch         Listing libraries         :
+13:39:05.295 LOG       CWCC Batch         SysDebug libraries        :
+13:39:05.295 LOG       CWCC Batch         DB2 Subsystem ID          :
+13:39:05.295 LOG       CWCC Batch         DB2 plan                  :
+13:39:05.295 LOG       CWCC Batch         Call interface            :NONE
+13:39:05.295 LOG       CWCC Batch         Debugger type             :NONE
+13:39:05.295 LOG       CWCC Batch         Component type            :COBOL
+13:39:05.295 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTSUBC rollback:false
+13:39:05.669 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/7acf8abc749045d19329b2c0996e14d2
+13:39:05.762 LOG       CWCC Batch       Uploading input data for module CWXTSUBC
+13:39:06.326 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>7acf8abc749045d19329b2c0996e14d2</jobdirectory><amode24>false</amode24><members><membername>CWXTSUBC</membername></members><loads><mainload>SYS2.CW.XATESTER.SXATLOAD</mainload><load>WPAAWJ.TTT.LOAD</load></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:39:06.504 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795410</jobid><jobname>SNCBAW0E</jobname><starttime>20191015133705421</starttime></xatz_response></XATZRESP>
+13:39:06.505 LOG       HCIClient        Response received from Host. Message: JobId:J0795410
+13:39:06.505 INFO      HCIClient        Job has been started at host with JobId:J0795410
+13:39:06.505 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:39:09.597 INFO      CWCC Batch       Component completed with program exit: +0
+13:39:09.661 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795410
+13:39:09.661 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:39:09.718 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:39:10.436 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:39:10.436 INFO      Component        Finished interpreting Component: CWXTSUBC program:CWXTSUBC
+13:39:10.439 COMMENT   Engine           Test Scenario execution ended

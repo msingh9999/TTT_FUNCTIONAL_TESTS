@@ -1,0 +1,30 @@
+11:44:08.778 COMMENT   Engine           Test Scenario execution started
+11:44:08.778 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b5f2a71787be73b59238d7b
+  Environment type              : Cics
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+11:44:08.779 INFO      Engine           Setting variables from context and context data extensions
+11:44:08.779 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
+11:44:08.780 INFO      Engine             id: environmentType    value: CICS
+11:44:08.780 INFO      Engine             id: userId             value: SNCBAW0
+11:44:08.784 INFO      SQLSelect        Interpreting SQLSelect id:SELECT statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASNAME FROM GENAPPDB.CUSTOMER
+11:44:08.784 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+11:44:08.784 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+11:44:09.063 LOG       SQLSelect        Preparing the SQL statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASNAME FROM GENAPPDB.CUSTOMER
+11:44:09.095 LOG       SQLSelect        Setting max rows to: 2
+11:44:09.095 LOG       SQLSelect        Setting up the SQL statement with parameters
+11:44:09.095 LOG       SQLSelect        Executing the SQL statement
+11:44:09.211 ERROR     SQLSelect        Unable to execute the SQL statement. DB2 SQL Error: SQLCODE=-206, SQLSTATE=42703, SQLERRMC=LASNAME, DRIVER=3.67.49
+11:44:09.212 ERROR     Engine           Unable to execute the SQL statement. DB2 SQL Error: SQLCODE=-206, SQLSTATE=42703, SQLERRMC=LASNAME, DRIVER=3.67.49
+11:44:09.212 ERROR     Engine           An error occurred. Now stopping the execution.
+11:44:09.212 COMMENT   Engine           Test Scenario execution ended

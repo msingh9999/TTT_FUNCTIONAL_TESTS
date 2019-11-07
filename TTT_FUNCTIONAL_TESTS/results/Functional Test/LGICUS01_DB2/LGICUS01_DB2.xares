@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="FAILURE" containsSimulation="false">
+  <ExecutionId>d359cad1-dd7e-412f-a8d1-7fd8dafd4e23</ExecutionId>
+  <Message>An error occurred and the execution has been stopped. Unable to execute the module:LGICUS01 at the host. Unable to execute at server. java.io.IOException: Job with JobId:J0796391 has finished without a notify file present: /u/xatester/sncbaw0/86fcebdd69c14a4b97cafdd7d76498ea/XAT_Module.o.xml.notify. This means that something went wrong when running the job at the server. There might be a JCL error in the submitted job. Please take a look at the job info at the host.</Message>
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
+      <Test>
+        <SQLSelect id="SQL_SELECT" maxRows="2">
+          <Statement>SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER</Statement>
+          <Output name="CUSTOMERNUMBER" />
+          <Output name="FIRSTNAME" />
+          <Output name="LASTNAME" />
+          <Row>
+            <CUSTOMERNUMBER>1</CUSTOMERNUMBER>
+            <FIRSTNAME>Andrew</FIRSTNAME>
+            <LASTNAME>Pandy</LASTNAME>
+          </Row>
+          <Row>
+            <CUSTOMERNUMBER>2</CUSTOMERNUMBER>
+            <FIRSTNAME>Scott</FIRSTNAME>
+            <LASTNAME>Tracey</LASTNAME>
+          </Row>
+        </SQLSelect>
+        <IterateData id="loop" referencedId="SQL_SELECT" dataPath="" />
+      </Test>
+      <MetaData>
+        <Component name="LGICUS01" type="COBOL">
+          <INOUT>
+            <dfhcommarea>
+              <ca-request-id type="Character" length="6" bytes="6" />
+              <ca-return-code type="NumericDisplay" length="2" bytes="2" signed="false" decimals="0" />
+              <ca-customer-num type="NumericDisplay" length="10" bytes="10" inOutType="INPUT" signed="false" decimals="0" />
+              <ca-customer-request inOutType="OUTPUT" redefines="ca-request-specific">
+                <ca-first-name type="Character" length="10" bytes="10" inOutType="OUTPUT" />
+                <ca-last-name type="Character" length="20" bytes="20" />
+                <ca-dob type="Character" length="10" bytes="10" />
+                <ca-house-name type="Character" length="20" bytes="20" />
+                <ca-house-num type="Character" length="4" bytes="4" />
+                <ca-postcode type="Character" length="8" bytes="8" />
+                <ca-num-policies type="NumericDisplay" length="3" bytes="3" signed="false" decimals="0" />
+                <ca-phone-mobile type="Character" length="20" bytes="20" />
+                <ca-phone-home type="Character" length="20" bytes="20" />
+                <ca-email-address type="Character" length="100" bytes="100" />
+                <ca-national-id-nbr type="Character" length="20" bytes="20" />
+                <ca-nin-type type="Character" length="2" bytes="2" />
+                <ca-street-address type="Character" length="30" bytes="30" />
+                <ca-city type="Character" length="20" bytes="20" />
+                <ca-state type="Character" length="2" bytes="2" />
+                <ca-country-code type="Character" length="3" bytes="3" />
+                <ca-sales-territory type="Character" length="5" bytes="5" />
+                <ca-customer-pfkey type="Character" length="2" bytes="2" />
+                <ca-customer-begin type="NumericDisplay" length="10" bytes="10" signed="false" decimals="0" />
+                <ca-customer-end type="NumericDisplay" length="10" bytes="10" signed="false" decimals="0" />
+                <ca-policy-data type="Character" length="32163" bytes="32163" />
+              </ca-customer-request>
+            </dfhcommarea>
+          </INOUT>
+        </Component>
+      </MetaData>
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b5f2a71787be73b59238d7b" logLevel="VERBOSE" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="sncbaw0">
+      <platformruntime database="DBCCCWCC" driver="com.ibm.db2.jcc.DB2Driver" uri="jdbc:db2://cwcc.compuware.com:546/${database}" environmenttype="CICS" applid="HCCAC013" callinterface="CICSCALL" />
+      <ExtensionData />
+      <ExtensionData componentName="lgicus01" componentId="5b87fbba787be73b59238f17">
+        <Parameter key="db2id">
+          <Value>DBCC</Value>
+        </Parameter>
+        <Parameter key="sourcelibrary">
+          <Value>GENAPP.ISPW.PROD.COB</Value>
+        </Parameter>
+        <Parameter key="db2plan">
+          <Value>GENAONE</Value>
+        </Parameter>
+        <Parameter key="applid">
+          <Value>HCCAC013</Value>
+        </Parameter>
+        <Parameter key="submodules">
+          <Value>LGICDB01</Value>
+        </Parameter>
+        <Parameter key="loadlibrary">
+          <Value>GENAPP.ISPW.PROD.LOAD</Value>
+        </Parameter>
+        <Parameter key="copybooknames">
+          <Value>LGCMAREA</Value>
+          <Value>LGPOLICY</Value>
+        </Parameter>
+        <Parameter key="sourcelibraries">
+          <Value>GENAPP.ISPW.PROD.COPY</Value>
+        </Parameter>
+        <Parameter key="callinterface">
+          <Value>CICSLINK</Value>
+        </Parameter>
+      </ExtensionData>
+      <References componentName="lgicus01" />
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="lgicus01" path="LGICUS01_DB2.xaunit">
+        <Test>
+          <SQLSelect id="SQL_SELECT" maxRows="2">
+            <Statement>SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER</Statement>
+            <Output name="CUSTOMERNUMBER" />
+            <Output name="FIRSTNAME" />
+            <Output name="LASTNAME" />
+          </SQLSelect>
+          <IterateData id="loop" referencedId="SQL_SELECT" dataPath="">
+            <Component id="lgicus01" label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" rollback="false">
+              <Data>
+                <dfhcommarea>
+                  <ca-request-id />
+                  <ca-return-code />
+                  <ca-customer-num>=loop.Row.CUSTOMERNUMBER</ca-customer-num>
+                  <ca-customer-request>
+                    <ca-first-name expected="=loop.Row.FIRSTNAME" />
+                    <ca-last-name expected="=loop.Row.LASTNAME" />
+                    <ca-dob />
+                    <ca-house-name />
+                    <ca-house-num />
+                    <ca-postcode />
+                    <ca-num-policies />
+                    <ca-phone-mobile />
+                    <ca-phone-home />
+                    <ca-email-address />
+                    <ca-national-id-nbr />
+                    <ca-nin-type />
+                    <ca-street-address />
+                    <ca-city />
+                    <ca-state />
+                    <ca-country-code />
+                    <ca-sales-territory />
+                    <ca-customer-pfkey />
+                    <ca-customer-begin />
+                    <ca-customer-end />
+                    <ca-policy-data />
+                  </ca-customer-request>
+                </dfhcommarea>
+              </Data>
+            </Component>
+          </IterateData>
+        </Test>
+        <MetaData>
+          <Component name="LGICUS01" type="COBOL">
+            <INOUT>
+              <dfhcommarea>
+                <ca-request-id type="Character" length="6" bytes="6" />
+                <ca-return-code type="NumericDisplay" length="2" bytes="2" signed="false" decimals="0" />
+                <ca-customer-num type="NumericDisplay" length="10" bytes="10" inOutType="INPUT" signed="false" decimals="0" />
+                <ca-customer-request inOutType="OUTPUT" redefines="ca-request-specific">
+                  <ca-first-name type="Character" length="10" bytes="10" inOutType="OUTPUT" />
+                  <ca-last-name type="Character" length="20" bytes="20" />
+                  <ca-dob type="Character" length="10" bytes="10" />
+                  <ca-house-name type="Character" length="20" bytes="20" />
+                  <ca-house-num type="Character" length="4" bytes="4" />
+                  <ca-postcode type="Character" length="8" bytes="8" />
+                  <ca-num-policies type="NumericDisplay" length="3" bytes="3" signed="false" decimals="0" />
+                  <ca-phone-mobile type="Character" length="20" bytes="20" />
+                  <ca-phone-home type="Character" length="20" bytes="20" />
+                  <ca-email-address type="Character" length="100" bytes="100" />
+                  <ca-national-id-nbr type="Character" length="20" bytes="20" />
+                  <ca-nin-type type="Character" length="2" bytes="2" />
+                  <ca-street-address type="Character" length="30" bytes="30" />
+                  <ca-city type="Character" length="20" bytes="20" />
+                  <ca-state type="Character" length="2" bytes="2" />
+                  <ca-country-code type="Character" length="3" bytes="3" />
+                  <ca-sales-territory type="Character" length="5" bytes="5" />
+                  <ca-customer-pfkey type="Character" length="2" bytes="2" />
+                  <ca-customer-begin type="NumericDisplay" length="10" bytes="10" signed="false" decimals="0" />
+                  <ca-customer-end type="NumericDisplay" length="10" bytes="10" signed="false" decimals="0" />
+                  <ca-policy-data type="Character" length="32163" bytes="32163" />
+                </ca-customer-request>
+              </dfhcommarea>
+            </INOUT>
+          </Component>
+        </MetaData>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20191017-13-49-43</Started>
+  <Ended>20191017-13-49-50</Ended>
+</XaUnitResult>

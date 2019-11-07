@@ -1,0 +1,537 @@
+13:46:52.313 COMMENT   Engine           Test Scenario execution started
+13:46:52.313 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+13:46:52.313 INFO      Engine           Setting variables from context and context data extensions
+13:46:52.313 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+13:46:52.313 INFO      Engine             id: environmentType    value: BATCH
+13:46:52.313 INFO      Engine             id: userId             value: SNCBAW0
+13:46:52.314 INFO      SQLSelect        Interpreting SQLSelect id:BEFORE statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:52.314 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+13:46:52.314 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+13:46:53.161 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:53.165 LOG       SQLSelect        Setting max rows to: 20
+13:46:53.165 LOG       SQLSelect        Setting up the SQL statement with parameters
+13:46:53.165 LOG       SQLSelect        Executing the SQL statement
+13:46:53.409 LOG       SQLSelect        Handling the SQL result
+13:46:53.437 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
+13:46:53.438 INFO      Component        Interpreting Component: XAKTDB2X program:XAKTDB2X
+13:46:53.439 LOG       CWCC Batch       Final JCL setup for the component:
+//EMPFILE  DD DISP=SHR,DSN=SNCBAW0.TSO.JCLLIB(TTTDATD)
+//RPTFILE  DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSTSPRT DD SYSOUT=*
+
+13:46:53.439 LOG       CWCC Batch       Component Runtime Settings:
+13:46:53.439 LOG       CWCC Batch         Load libraries :
+13:46:53.439 LOG       CWCC Batch         Optional main Load library:SNCBAW0.ESS.LOAD
+13:46:53.439 LOG       CWCC Batch         Listing libraries         :
+13:46:53.439 LOG       CWCC Batch         SysDebug libraries        :
+13:46:53.439 LOG       CWCC Batch         DB2 Subsystem ID          :DBCC
+13:46:53.439 LOG       CWCC Batch         DB2 plan                  :XAKTDB2X
+13:46:53.439 LOG       CWCC Batch         Call interface            :NONE
+13:46:53.439 LOG       CWCC Batch         Debugger type             :NONE
+13:46:53.439 LOG       CWCC Batch         Component type            :COBOL
+13:46:53.439 INFO      CWCC Batch       Sending Module execution request to Host for module:XAKTDB2X rollback:true
+13:46:53.805 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/12032d78821a48caaf9f1f017f7f3be5
+13:46:53.893 LOG       CWCC Batch       Uploading input data for module XAKTDB2X
+13:46:54.542 INFO      CWCC Batch       Component has post SQLSelect statement that is: SELECT EMP_NUM, WAGES, OVERTIME, COMM  FROM SNCBAW0.KT_DEMOTAB
+13:46:54.542 LOG       CWCC Batch       Uploading SQLSelect data into file XAT_Module.i.xmlsql
+13:46:55.025 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan>XAKTDB2X</db2plan><db2id>DBCC</db2id><rollback>true</rollback><jobdirectory>12032d78821a48caaf9f1f017f7f3be5</jobdirectory><amode24>false</amode24><members><membername>XAKTDB2X</membername></members><loads><mainload>SNCBAW0.ESS.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang><refs><ref>//EMPFILE  DD DISP=SHR,DSN=SNCBAW0.TSO.JCLLIB(TTTDATD)</ref><ref>//RPTFILE  DD SYSOUT=*</ref><ref>//SYSOUT   DD SYSOUT=*</ref><ref>//SYSTSPRT DD SYSOUT=*</ref></refs><sql>true</sql></xatz_request></XATZREQ>
+13:46:55.202 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795414</jobid><jobname>SNCBAW0E</jobname><starttime>20191015134454124</starttime></xatz_response></XATZRESP>
+13:46:55.203 LOG       HCIClient        Response received from Host. Message: JobId:J0795414
+13:46:55.203 INFO      HCIClient        Job has been started at host with JobId:J0795414
+13:46:55.203 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:46:58.301 INFO      CWCC Batch       Component completed with program exit: +0
+13:46:58.352 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795414
+13:46:58.352 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:46:58.352 LOG       CWCC Batch       Post SQLSelect has been executed, now getting result from file XAT_Module.o.xmlsql
+13:46:58.429 LOG       CWCC Batch       Setting SQLSelect result at id:xaktdb2xSql
+13:46:58.478 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:46:58.494 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:46:58.494 INFO      Component        Finished interpreting Component: XAKTDB2X program:XAKTDB2X
+13:46:58.494 INFO      SQLSelect        Interpreting SQLSelect id:AFTER statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:58.494 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+13:46:58.494 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+13:46:58.774 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:58.774 LOG       SQLSelect        Setting max rows to: 20
+13:46:58.774 LOG       SQLSelect        Setting up the SQL statement with parameters
+13:46:58.774 LOG       SQLSelect        Executing the SQL statement
+13:46:58.817 LOG       SQLSelect        Handling the SQL result
+13:46:58.818 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
+13:46:58.818 INFO      Verify           Interpreting Verify component name:Verify
+13:46:58.885 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+BEFORE
+13:46:58.919 LOG       Verify           Expression evaluated to data structure:
+<Row>
+  <EMP_NUM>03431</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>2</REGION>
+  <FIRST_LAST_NAME>GAIL LAWRENCE</FIRST_LAST_NAME>
+  <STREET_ADDR>123 NORTH AVE</STREET_ADDR>
+  <CITY>PLANO</CITY>
+  <STATE>TX</STATE>
+  <ZIP>57010</ZIP>
+  <HIREDATE>840625</HIREDATE>
+  <HOURS>38</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02523</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>1</REGION>
+  <FIRST_LAST_NAME>JOHN SMITH</FIRST_LAST_NAME>
+  <STREET_ADDR>5456 ELM STREET</STREET_ADDR>
+  <CITY>WAYNE</CITY>
+  <STATE>IL</STATE>
+  <ZIP>77902</ZIP>
+  <HIREDATE>811015</HIREDATE>
+  <HOURS>30</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01568</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>THOMAS LONG</FIRST_LAST_NAME>
+  <STREET_ADDR>12 RACE STREET</STREET_ADDR>
+  <CITY>SAN JOSE</CITY>
+  <STATE>CA</STATE>
+  <ZIP>95126</ZIP>
+  <HIREDATE>870331</HIREDATE>
+  <HOURS>40</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>03241</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>MARCIA SULLIVAN</FIRST_LAST_NAME>
+  <STREET_ADDR>55 SOUTH STREET</STREET_ADDR>
+  <CITY>NEW YORK</CITY>
+  <STATE>NY</STATE>
+  <ZIP>10017</ZIP>
+  <HIREDATE>930405</HIREDATE>
+  <HOURS>44</HOURS>
+  <RATE>3.00</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01343</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>JAMES MORRISON</FIRST_LAST_NAME>
+  <STREET_ADDR>11-A MAPLE AVE</STREET_ADDR>
+  <CITY>SYRACUSE</CITY>
+  <STATE>NY</STATE>
+  <ZIP>12123</ZIP>
+  <HIREDATE>910913</HIREDATE>
+  <HOURS>37</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02171</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>SAMUEL ADDAMS</FIRST_LAST_NAME>
+  <STREET_ADDR>900 LINCOLN CT</STREET_ADDR>
+  <CITY>RENO</CITY>
+  <STATE>NV</STATE>
+  <ZIP>82433</ZIP>
+  <HIREDATE>860102</HIREDATE>
+  <HOURS>42</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>59999</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>MAX E MILLION</FIRST_LAST_NAME>
+  <STREET_ADDR>100 MAIN ST</STREET_ADDR>
+  <CITY>MAIN</CITY>
+  <STATE>OH</STATE>
+  <ZIP>34093</ZIP>
+  <HIREDATE>910203</HIREDATE>
+  <HOURS>88</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+13:46:58.919 LOG       Verify           Expected from expression:
+<Row>
+  <EMP_NUM>03431</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>2</REGION>
+  <FIRST_LAST_NAME>GAIL LAWRENCE</FIRST_LAST_NAME>
+  <STREET_ADDR>123 NORTH AVE</STREET_ADDR>
+  <CITY>PLANO</CITY>
+  <STATE>TX</STATE>
+  <ZIP>57010</ZIP>
+  <HIREDATE>840625</HIREDATE>
+  <HOURS>38</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02523</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>1</REGION>
+  <FIRST_LAST_NAME>JOHN SMITH</FIRST_LAST_NAME>
+  <STREET_ADDR>5456 ELM STREET</STREET_ADDR>
+  <CITY>WAYNE</CITY>
+  <STATE>IL</STATE>
+  <ZIP>77902</ZIP>
+  <HIREDATE>811015</HIREDATE>
+  <HOURS>30</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01568</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>THOMAS LONG</FIRST_LAST_NAME>
+  <STREET_ADDR>12 RACE STREET</STREET_ADDR>
+  <CITY>SAN JOSE</CITY>
+  <STATE>CA</STATE>
+  <ZIP>95126</ZIP>
+  <HIREDATE>870331</HIREDATE>
+  <HOURS>40</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>03241</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>MARCIA SULLIVAN</FIRST_LAST_NAME>
+  <STREET_ADDR>55 SOUTH STREET</STREET_ADDR>
+  <CITY>NEW YORK</CITY>
+  <STATE>NY</STATE>
+  <ZIP>10017</ZIP>
+  <HIREDATE>930405</HIREDATE>
+  <HOURS>44</HOURS>
+  <RATE>3.00</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01343</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>JAMES MORRISON</FIRST_LAST_NAME>
+  <STREET_ADDR>11-A MAPLE AVE</STREET_ADDR>
+  <CITY>SYRACUSE</CITY>
+  <STATE>NY</STATE>
+  <ZIP>12123</ZIP>
+  <HIREDATE>910913</HIREDATE>
+  <HOURS>37</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02171</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>SAMUEL ADDAMS</FIRST_LAST_NAME>
+  <STREET_ADDR>900 LINCOLN CT</STREET_ADDR>
+  <CITY>RENO</CITY>
+  <STATE>NV</STATE>
+  <ZIP>82433</ZIP>
+  <HIREDATE>860102</HIREDATE>
+  <HOURS>42</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>59999</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>MAX E MILLION</FIRST_LAST_NAME>
+  <STREET_ADDR>100 MAIN ST</STREET_ADDR>
+  <CITY>MAIN</CITY>
+  <STATE>OH</STATE>
+  <ZIP>34093</ZIP>
+  <HIREDATE>910203</HIREDATE>
+  <HOURS>88</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+13:46:58.980 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+AFTER
+13:46:58.987 LOG       Verify           Expression evaluated to data structure:
+<Row>
+  <EMP_NUM>03431</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>2</REGION>
+  <FIRST_LAST_NAME>GAIL LAWRENCE</FIRST_LAST_NAME>
+  <STREET_ADDR>123 NORTH AVE</STREET_ADDR>
+  <CITY>PLANO</CITY>
+  <STATE>TX</STATE>
+  <ZIP>57010</ZIP>
+  <HIREDATE>840625</HIREDATE>
+  <HOURS>38</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02523</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>1</REGION>
+  <FIRST_LAST_NAME>JOHN SMITH</FIRST_LAST_NAME>
+  <STREET_ADDR>5456 ELM STREET</STREET_ADDR>
+  <CITY>WAYNE</CITY>
+  <STATE>IL</STATE>
+  <ZIP>77902</ZIP>
+  <HIREDATE>811015</HIREDATE>
+  <HOURS>30</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01568</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>THOMAS LONG</FIRST_LAST_NAME>
+  <STREET_ADDR>12 RACE STREET</STREET_ADDR>
+  <CITY>SAN JOSE</CITY>
+  <STATE>CA</STATE>
+  <ZIP>95126</ZIP>
+  <HIREDATE>870331</HIREDATE>
+  <HOURS>40</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>03241</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>MARCIA SULLIVAN</FIRST_LAST_NAME>
+  <STREET_ADDR>55 SOUTH STREET</STREET_ADDR>
+  <CITY>NEW YORK</CITY>
+  <STATE>NY</STATE>
+  <ZIP>10017</ZIP>
+  <HIREDATE>930405</HIREDATE>
+  <HOURS>44</HOURS>
+  <RATE>3.00</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01343</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>JAMES MORRISON</FIRST_LAST_NAME>
+  <STREET_ADDR>11-A MAPLE AVE</STREET_ADDR>
+  <CITY>SYRACUSE</CITY>
+  <STATE>NY</STATE>
+  <ZIP>12123</ZIP>
+  <HIREDATE>910913</HIREDATE>
+  <HOURS>37</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02171</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>SAMUEL ADDAMS</FIRST_LAST_NAME>
+  <STREET_ADDR>900 LINCOLN CT</STREET_ADDR>
+  <CITY>RENO</CITY>
+  <STATE>NV</STATE>
+  <ZIP>82433</ZIP>
+  <HIREDATE>860102</HIREDATE>
+  <HOURS>42</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>59999</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>MAX E MILLION</FIRST_LAST_NAME>
+  <STREET_ADDR>100 MAIN ST</STREET_ADDR>
+  <CITY>MAIN</CITY>
+  <STATE>OH</STATE>
+  <ZIP>34093</ZIP>
+  <HIREDATE>910203</HIREDATE>
+  <HOURS>88</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+13:46:58.987 LOG       Verify           Actual from expression:
+<Row>
+  <EMP_NUM>03431</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>2</REGION>
+  <FIRST_LAST_NAME>GAIL LAWRENCE</FIRST_LAST_NAME>
+  <STREET_ADDR>123 NORTH AVE</STREET_ADDR>
+  <CITY>PLANO</CITY>
+  <STATE>TX</STATE>
+  <ZIP>57010</ZIP>
+  <HIREDATE>840625</HIREDATE>
+  <HOURS>38</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02523</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>1</REGION>
+  <FIRST_LAST_NAME>JOHN SMITH</FIRST_LAST_NAME>
+  <STREET_ADDR>5456 ELM STREET</STREET_ADDR>
+  <CITY>WAYNE</CITY>
+  <STATE>IL</STATE>
+  <ZIP>77902</ZIP>
+  <HIREDATE>811015</HIREDATE>
+  <HOURS>30</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01568</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>THOMAS LONG</FIRST_LAST_NAME>
+  <STREET_ADDR>12 RACE STREET</STREET_ADDR>
+  <CITY>SAN JOSE</CITY>
+  <STATE>CA</STATE>
+  <ZIP>95126</ZIP>
+  <HIREDATE>870331</HIREDATE>
+  <HOURS>40</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>03241</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>MARCIA SULLIVAN</FIRST_LAST_NAME>
+  <STREET_ADDR>55 SOUTH STREET</STREET_ADDR>
+  <CITY>NEW YORK</CITY>
+  <STATE>NY</STATE>
+  <ZIP>10017</ZIP>
+  <HIREDATE>930405</HIREDATE>
+  <HOURS>44</HOURS>
+  <RATE>3.00</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>01343</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>3</REGION>
+  <FIRST_LAST_NAME>JAMES MORRISON</FIRST_LAST_NAME>
+  <STREET_ADDR>11-A MAPLE AVE</STREET_ADDR>
+  <CITY>SYRACUSE</CITY>
+  <STATE>NY</STATE>
+  <ZIP>12123</ZIP>
+  <HIREDATE>910913</HIREDATE>
+  <HOURS>37</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>02171</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>SAMUEL ADDAMS</FIRST_LAST_NAME>
+  <STREET_ADDR>900 LINCOLN CT</STREET_ADDR>
+  <CITY>RENO</CITY>
+  <STATE>NV</STATE>
+  <ZIP>82433</ZIP>
+  <HIREDATE>860102</HIREDATE>
+  <HOURS>42</HOURS>
+  <RATE>2.75</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+<Row>
+  <EMP_NUM>59999</EMP_NUM>
+  <WAGE_TYPE>H</WAGE_TYPE>
+  <REGION>4</REGION>
+  <FIRST_LAST_NAME>MAX E MILLION</FIRST_LAST_NAME>
+  <STREET_ADDR>100 MAIN ST</STREET_ADDR>
+  <CITY>MAIN</CITY>
+  <STATE>OH</STATE>
+  <ZIP>34093</ZIP>
+  <HIREDATE>910203</HIREDATE>
+  <HOURS>88</HOURS>
+  <RATE>2.50</RATE>
+  <WAGES>0.00</WAGES>
+  <OVERTIME>0.00</OVERTIME>
+  <COMM>0.00</COMM>
+</Row>
+13:46:58.991 INFO      Verify           Expected and Actual data was found to be identical
+13:46:58.991 INFO      Verify           Interpreting Verify component name:Verify Update
+13:46:58.991 INFO      Verify           Using verify expression:xaktdb2xSql.Row[0].WAGES>0
+13:46:59.037 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+xaktdb2xSql.Row[0].WAGES>0
+13:46:59.087 LOG       Verify           Expression returned:
+true
+13:46:59.087 COMMENT   Engine           Test Scenario execution ended

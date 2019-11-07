@@ -1,0 +1,49 @@
+11:18:12.100 COMMENT   Engine           Test Scenario execution started
+11:18:12.102 INFO      Engine           Using context settings:
+  Engine Version       : 19.5.1
+  Environment id                : 5b5f2a71787be73b59238d7b
+  Environment type              : Cics
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : sncbaw0
+11:18:12.102 INFO      Engine           Setting variables from context and context data extensions
+11:18:12.102 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
+11:18:12.102 INFO      Engine             id: environmentType    value: CICS
+11:18:12.102 INFO      Engine             id: userId             value: sncbaw0
+11:18:12.102 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+11:18:12.105 INFO      Component        Component will be executed in CICS and top level element definitions are:
+11:18:12.105 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+11:18:12.140 LOG       CWCC CICS        Component Runtime Settings:
+11:18:12.140 LOG       CWCC CICS          Load library              :GENAPP.ISPW.PROD.LOAD
+11:18:12.140 LOG       CWCC CICS          Additional load libraries :
+11:18:12.140 LOG       CWCC CICS          Listing libraries         :
+11:18:12.140 LOG       CWCC CICS          SysDebug libraries        :
+11:18:12.140 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
+11:18:12.140 LOG       CWCC CICS          DB2 plan                  :GENAONE
+11:18:12.140 LOG       CWCC CICS          APPLID                    :HCCAC013
+11:18:12.140 LOG       CWCC CICS          Channel                   :
+11:18:12.140 LOG       CWCC CICS          Call interface            :CICSLINK
+11:18:12.140 LOG       CWCC CICS          Debugger type             :NONE
+11:18:12.140 LOG       CWCC CICS          Component type            :COBOL
+11:18:12.153 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+11:18:13.165 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/f009a1ec83e14e6386703e60acbded63
+11:18:13.311 LOG       CWCC CICS        Uploading input data for module LGICUS01
+11:18:13.661 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>f009a1ec83e14e6386703e60acbded63</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+11:18:13.835 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0778265</jobid><jobname>SNCBAW0C</jobname><starttime>20190829111625869</starttime></xatz_response></XATZRESP>
+11:18:13.836 LOG       HCIClient        Response received from Host. Message: JobId:J0778265
+11:18:13.837 INFO      HCIClient        Job has been started at host with JobId:J0778265
+11:18:13.837 INFO      CWCC CICS        Waiting for Execution Result from Host
+11:18:16.981 INFO      CWCC CICS        Component completed with program exit: +0
+11:18:17.068 LOG       CWCC CICS        Setting execution variable 'jobid' to J0778265
+11:18:17.068 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
+11:18:17.142 INFO      Component        Verifying program exit code: 0 against verify expression: value<8
+11:18:17.163 INFO      Component        Program exit code was verified to be accepted by the expression: value<8
+11:18:17.164 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+11:18:17.164 COMMENT   Engine           Test Scenario execution ended
